@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Words</title>
+</head>
+
+<body>
+    <div class="words">
+        <div class="data">
+            <label for="word">Enter an english word:</label>
+            <input type="text" id="word" placeholder="Word or expression">
+            <p class="error">error</p>
+            <label for="type">and what to get?</label>
+            <select id="select" onchange="typeSelect()">
+                <option value="0" disabled selected>--choose the type of details--</option>
+                <option value="1">definitions</option>
+                <option value="2">synonyms</option>
+            </select>
+            <!-- <button type="button" id="btn">Get a response</button> -->
+        </div>
+        <div class="txt"></div>
+        <div id="synth" class="synth">
+            <h4>Wanna listen to?</h4>
+            <div class="options">
+                <label for="voice">Voice:</label>
+                <select id="voice"></select>
+
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" min="0" max="2" step="0.1" value="1">
+
+                <label for="rate">Rate:</label>
+                <input type="range" id="rate" min="0" max="2" step="0.1" value="1">
+
+            </div>
+            <div class="btns">
+                <button id="speak">Speak</button>
+                <button id="stop">Stop/Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="synth.js"></script> -->
+    <!-- <script src="words.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

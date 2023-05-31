@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: flex;
+	align-items: flex-start;
+	height: 100vh;
+	font-family: "Montserrat", sans-serif;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+html {
+	font-size: 62.5%;
+}
+.words {
+	position: relative;
+	left: 0;
+	color: #fff;
+	font-size: 2em;
+	width: 20em;
+	transform: translateX(50%);
+}
+.words .data {
+	display: flex;
+	flex-flow: column wrap;
+}
+.words .error{
+	color: crimson;
+	margin-top: 1em;
+	visibility: hidden;
+}
+.data label {
+	margin: 0.5em 0;
+	margin-top: 1em;
+}
+.data input,
+.data select {
+	border-radius: 0.3em;
+	padding: 1em;
+	font-size: 1em;
+}
+
+.words .txt {
+	display: flex;
+	align-items: start;
+	padding: 20px;
+}
+.words .note {
+	display: none;
+	justify-content: flex-start;
+	flex-direction: column;
+	position: absolute;
+	right: -400%;
+	top: 2.8em;
+	overflow: scroll;
+	background-color: white;
+	color: black;
+	max-width: 200%;
+	min-width: 200%;
+	max-height: 30em;
+	margin-bottom: 2em;
+	padding: 0.6em 1.2em;
+	border: none;	
+	transition: right 0.6s;
+	animation: position 1s;
+}
+.words .note section {
+	display: flex;
+	flex-direction: column;
+	margin: 0.5em 0;
+	font-style: italic;
+}
+
+.words .note.active {
+	display: flex;
+	right: -45em;
+}
+
+.synth {
+	opacity: 0;
+	border-radius: 0.5em;
+	padding: 1em;
+	box-shadow: 5px 5px 10px rgb(255, 255, 255);
+}
+.anim {
+	animation: opacity 1s 1s forwards;
+}
+.synth h4 {
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0.5em 0;
+}
+.synth .options {
+	display: flex;
+	flex-direction: column;
+}
+.synth .options select {
+	padding: 1em;
+	border-radius: 0.5em;
+}
+.synth .options label {
+	margin-top: 0.5em;
+	padding: 0.5em;
+}
+.synth .btns {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+}
+.synth button {
+	margin: 2.5em 0;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	font-size: 1em;
+	background-color: skyblue;
+	cursor: pointer;
+	transition: color 0.5s, background-color 0.5s;
+}
+.synth button:hover {
+	color: navy;
+	background-color: lime;
+}
+
+@keyframes position {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
